@@ -1,40 +1,32 @@
-//Llamar a los elementos con los que vamos a trabajar
-const producto = document.querySelectorAll(".producto"); //LLamar a todos los elementos que tienen la clase producto. 
-const miLista = document.querySelector("#lista"); //LLamar al unico elemento que tiene el id lista. 
+const producto = document.querySelectorAll(".producto"); 
+const miLista = document.querySelector("#lista"); 
 const botonAgregar = document.querySelectorAll(".agregar");
 const botonVaciar = document.querySelector("#vaciar");
 const total = document.querySelector(".totalPrecio");
 const hoverImages = document.querySelectorAll('.hover-img');
 
 
-//Inicializamos el total de precio en 0
 let precioTotal = 0;
 
 
-//Ciclo for para recorrer los botones de la tarjeta
 for(let i = 0; i < botonAgregar.length; i++ ){
-    //Codigo a ejecutar 
     botonAgregar[i].addEventListener('click',function(){
-        //Codigo del evento
         const nombreProducto = producto[i].querySelector("h3").textContent;
         const precioProducto = parseFloat(
           producto[i].querySelector("p").textContent
-            .replace("$","")   // quita el símbolo $
-            .replace(".","") // quita los puntos de miles
-            .replace(",","")  // reemplaza la coma decimal por punto
+            .replace("$","")   
+            .replace(".","") 
+            .replace(",","") 
         );
         
 
 
-        //creamos los items por cada producto en la lista del carrito. Usamos createElement
         const nuevoItem = document.createElement("li");
         nuevoItem.innerHTML = `${nombreProducto} - $${precioProducto}`;
-        //elementopadre.appendChild(elementoHijo)
         miLista.appendChild(nuevoItem);
-        // Botón eliminar para cada producto (item) de la lista del carrito
         const botonEliminar = document.createElement("button");
-        botonEliminar.classList.add("btn", "btn-danger", "btn-sm", "ms-2"); // clases bootstrap
-        botonEliminar.innerHTML = '<i class="bi bi-x-lg"></i>'; // ícono X de bootstrap
+        botonEliminar.classList.add("btn", "btn-danger", "btn-sm", "ms-2"); 
+        botonEliminar.innerHTML = '<i class="bi bi-x-lg"></i>'; 
         nuevoItem.appendChild(botonEliminar);
 
         botonEliminar.addEventListener('click', () => {
@@ -44,29 +36,27 @@ for(let i = 0; i < botonAgregar.length; i++ ){
 });
 
 
-        //Suma total de los precios
+        
         precioTotal += precioProducto;
         total.textContent = precioTotal; 
         
     })
 }
 
-//EventListener para el boton vaciar.
 botonVaciar.addEventListener('click',function(){
     miLista.innerHTML = "";
     precioTotal = 0;
     total.textContent = precioTotal;
 })
-//EventListener cambio de imagen
 hoverImages.forEach(img => {
-    const originalSrc = img.src;                 // Guarda la imagen original
-    const hoverSrc = img.dataset.hover;         // Toma la imagen de data-hover
+    const originalSrc = img.src;                 
+    const hoverSrc = img.dataset.hover;         
   
     img.addEventListener('mouseover', () => {
-      img.style.opacity = 0;                     // Hace fade out
+      img.style.opacity = 0;                    
       setTimeout(() => {
-        img.src = hoverSrc;                      // Cambia la imagen
-        img.style.opacity = 1;                   // Hace fade in
+        img.src = hoverSrc;                      
+        img.style.opacity = 1;                   
       }, 100);
     });
   

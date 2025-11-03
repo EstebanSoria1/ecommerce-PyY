@@ -1,28 +1,25 @@
-/* ===== BODY ===== */
+
 body {
-  background-color: #000; /* Marrón oscuro cálido */
+  background-color: #000; 
   margin: 0;
   padding: 0;
   font-family: 'Libre Baskerville', serif;
-  color: #D7C79E; /* Beige claro para texto */
-  overflow-x: hidden; /* evita barras horizontales */
+  color: #D7C79E;
+  overflow-x: hidden; 
 }
 
-/* ===== HEADINGS ===== */
-h1 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
 }
 
 h2 {
-  color: #A6A26A; /* Verde oliva apagado */
+  color: #A6A26A; 
 }
 
 h3, h4 {
-  color: #8C7C55; /* Beige oscuro tenue */
+  color: #8C7C55; 
 }
 
-/* ===== HEADER ESTILO SEVAMATE ===== */
 #main-header {
   background-color: #D7C79E;
   border-bottom: 2px solid #7D7A3A;
@@ -74,20 +71,19 @@ h3, h4 {
   color: #A6A26A;
 }
 
-/* ===== PARRAFO ===== */
+
 p {
   color: #E9E5D6;
   line-height: 1.7;
 }
 
-/* ===== CARRUSEL BANNER PUBLICITARIO ===== */
 #carouselBanner {
-  width: 110vw;           /* cubre un poco más que el viewport */
+  width: 110vw;           
   position: relative;
-  left: -5vw;           /* desplaza hacia la izquierda la mitad del extra */
+  left: -5vw;           
   height: 30px;           
   overflow: hidden;
-  background-color: #000 !important; /* negro absoluto */
+  background-color: #000 !important; 
 }
 
 
@@ -109,10 +105,9 @@ p {
   display: block;
 }
 
-/* ===== GALERÍA FAMOSOS ===== */
 #galeriaTop {
   text-align: center;
-  padding: 40px 0;
+  padding: 40px ;
   color: #D7C79E;
 }
 
@@ -121,6 +116,7 @@ p {
   object-fit: cover;
   height: 370px;
   width: 100%;
+  object-fit: cover; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid #A6A26A;
   filter: brightness(0.9);
@@ -131,7 +127,7 @@ p {
   box-shadow: 0 0 12px rgba(215, 199, 158, 0.25);
 }
 
-/* ===== PRODUCTOS ===== */
+
 .producto {
   border: 1px solid #A6A26A;
   border-radius: 8px;
@@ -155,9 +151,8 @@ p {
   filter: brightness(0.95);
 }
 
-/* ===== FOOTER ===== */
 footer {
-  background-color: #1E1B15; /* negro */
+  background-color: #1E1B15; 
   color: #D7C79E;
   text-align: center;
   padding: 25px 0;
@@ -180,7 +175,6 @@ footer img.logo {
   font-size: 1.1rem;
 }
 
-/* ===== MEDIA QUERIES ===== */
 @media (max-width: 768px) {
   #main-header {
     text-align: center;
