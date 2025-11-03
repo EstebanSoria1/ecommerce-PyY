@@ -1,12 +1,12 @@
-
 body {
   background-color: #000; 
   margin: 0;
   padding: 0;
   font-family: 'Libre Baskerville', serif;
   color: #D7C79E;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
+
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
@@ -32,7 +32,6 @@ h3, h4 {
   font-family: "Castoro", serif;
   font-weight: 400;
   font-style: normal;
-
   padding: 15px 0;
   font-size: 55px;
   letter-spacing: 3px;
@@ -71,7 +70,6 @@ h3, h4 {
   color: #A6A26A;
 }
 
-
 p {
   color: #E9E5D6;
   line-height: 1.7;
@@ -86,8 +84,6 @@ p {
   background-color: #000 !important; 
 }
 
-
-
 #carouselBanner .carousel-inner {
   width: 100%;
   height: 100%;
@@ -95,7 +91,6 @@ p {
 
 #carouselBanner .carousel-item {
   height: 100%;
-  
 }
 
 #carouselBanner .banner-img {
@@ -107,7 +102,7 @@ p {
 
 #galeriaTop {
   text-align: center;
-  padding: 40px ;
+  padding: 40px;
   color: #D7C79E;
 }
 
@@ -116,7 +111,6 @@ p {
   object-fit: cover;
   height: 370px;
   width: 100%;
-  object-fit: cover; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid #A6A26A;
   filter: brightness(0.9);
@@ -126,7 +120,6 @@ p {
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(215, 199, 158, 0.25);
 }
-
 
 .producto {
   border: 1px solid #A6A26A;
@@ -191,14 +184,26 @@ footer img.logo {
   }
 
   #carouselBanner {
-    height: 40px;
+    height: auto;
+  }
+
+  #carouselBanner .banner-img {
+    object-fit: contain;
+  }
+
+  .galeria-img {
+    height: auto;
+    object-fit: contain;
   }
 
   .producto img {
-    max-height: 150px;
+    max-height: none;
+    width: 100%;
+    object-fit: contain;
   }
 
-  .producto {
-    margin-bottom: 20px;
+  body {
+    transform: scale(0.75);
+    transform-origin: top center;
   }
 }
