@@ -109,7 +109,7 @@ p {
 .galeria-img {
   border-radius: 10px;
   object-fit: cover;
-  height: 430px;
+  height: 400px;
   width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid #A6A26A;
@@ -144,6 +144,21 @@ p {
   filter: brightness(0.95);
 }
 
+#comprar {
+  background-color: green;
+  border: 2px solid green;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+#comprar:hover {
+  background-color: #218838;
+  border-color: #218838;
+  transform: scale(1.05);
+}
+
 footer {
   background-color: #1E1B15; 
   color: #D7C79E;
@@ -168,19 +183,27 @@ footer img.logo {
   font-size: 1.1rem;
 }
 
+/* 📱 Versión móvil: igual diseño, pero más pequeño y proporcionado */
 @media (max-width: 768px) {
-  #main-header {
-    text-align: center;
+  body {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+
+  #main-header h1 {
+    font-size: 35px;
   }
 
   #main-header .logo {
+    height: 60px;
     position: static;
-    margin-bottom: 10px;
-    height: 50px;
+    margin: 0 auto;
+    display: block;
   }
 
   #main-header .nav-list {
-    gap: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
   #carouselBanner {
@@ -197,13 +220,20 @@ footer img.logo {
   }
 
   .producto img {
-    max-height: none;
     width: 100%;
+    height: auto;
     object-fit: contain;
   }
 
-  body {
-    transform: scale(0.75);
-    transform-origin: top center;
+  .producto {
+    transform: scale(0.9);
+  }
+
+  .producto:hover {
+    transform: scale(0.95);
+  }
+
+  footer img.logo {
+    height: 50px;
   }
 }
