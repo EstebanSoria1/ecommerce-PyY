@@ -183,10 +183,9 @@ footer img.logo {
 
 @media (max-width: 768px) {
   body {
-    transform: scale(0.85);
-    transform-origin: top center;
-    width: 100vw;
+    transform: none;
     overflow-x: hidden;
+    width: 100%;
   }
 
   #carouselBanner {
@@ -194,70 +193,97 @@ footer img.logo {
     left: 0;
     margin: 0;
     padding: 0;
+    height: 25px;
+    background-color: #000 !important;
+  }
+
+  .row-cols-md-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 0 5px;
   }
 
   .producto {
-    padding: 10px;
-    margin: 5px;
+    padding: 8px;
+    margin: 0;
+    transform: scale(0.9);
   }
 
   .producto img {
-    max-height: 150px;
+    max-height: 100px;
     width: 100%;
     object-fit: contain;
   }
 
   .galeria-img {
-    height: 200px;
+    height: 180px;
     object-fit: contain;
     width: 100%;
   }
 
   #main-header h1 {
-    font-size: 35px;
+    font-size: 28px;
   }
 
   #main-header .logo {
-    height: 60px;
+    height: 50px;
+    position: static;
+    margin: 0 auto;
+    display: block;
   }
 
   #main-header .nav-list {
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   #main-header .nav-link {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .btn {
-    padding: 6px 12px;
-    font-size: 0.85rem;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+
+  footer img.logo {
+    height: 40px;
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    transform: scale(0.75);
-    transform-origin: top center;
+  .row-cols-md-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
   }
   
   .producto img {
-    max-height: 120px;
+    max-height: 80px;
   }
   
   .galeria-img {
-    height: 150px;
+    height: 140px;
+  }
+  
+  #main-header h1 {
+    font-size: 24px;
   }
 }
