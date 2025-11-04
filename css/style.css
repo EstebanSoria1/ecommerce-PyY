@@ -38,7 +38,7 @@ h3, h4 {
   color: #2F2A1E;
 }
 
-#main-header .logo {
+#main-header #logo {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -148,7 +148,6 @@ p {
   background-color: green;
   border: 2px solid green;
   color: #fff;
-  
 }
 
 #comprar:hover {
@@ -286,4 +285,30 @@ footer img.logo {
   #main-header h1 {
     font-size: 24px;
   }
+}
+
+/* evita scroll post-footer */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+section:last-child, main > section:last-child, .container:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }

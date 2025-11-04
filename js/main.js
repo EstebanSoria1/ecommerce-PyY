@@ -70,3 +70,9 @@ hoverImages.forEach(img => {
     }, 100);
   });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  logo.style.cursor = "pointer";
+  logo.addEventListener("click", function() {
+    document.body.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
