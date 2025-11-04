@@ -109,7 +109,7 @@ p {
 .galeria-img {
   border-radius: 10px;
   object-fit: cover;
-  height: 400px;
+  height: 4000px;
   width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid #A6A26A;
@@ -181,17 +181,83 @@ footer img.logo {
   font-size: 1.1rem;
 }
 
-/* 📱 Versión móvil: igual diseño, pero más pequeño y proporcionado */
 @media (max-width: 768px) {
   body {
-    transform: scale(0.7);
+    transform: scale(0.85);
     transform-origin: top center;
     width: 100vw;
     overflow-x: hidden;
   }
 
-  html, body {
+  #carouselBanner {
+    width: 100vw;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .producto {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .producto img {
+    max-height: 150px;
     width: 100%;
-    height: 100%;
+    object-fit: contain;
+  }
+
+  .galeria-img {
+    height: 200px;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  #main-header h1 {
+    font-size: 35px;
+  }
+
+  #main-header .logo {
+    height: 60px;
+  }
+
+  #main-header .nav-list {
+    gap: 20px;
+  }
+
+  #main-header .nav-link {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    transform: scale(0.75);
+    transform-origin: top center;
+  }
+  
+  .producto img {
+    max-height: 120px;
+  }
+  
+  .galeria-img {
+    height: 150px;
   }
 }
