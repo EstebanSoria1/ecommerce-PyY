@@ -5,6 +5,8 @@ const botonVaciar = document.querySelector("#vaciar");
 const botonComprar = document.querySelector("#comprar");
 const total = document.querySelector(".totalPrecio");
 const hoverImages = document.querySelectorAll('.hover-img');
+const logo = document.getElementById("logo");
+
 
 let precioTotal = 0;
 
